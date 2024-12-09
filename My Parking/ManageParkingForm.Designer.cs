@@ -36,7 +36,7 @@ namespace My_Parking
             btn_edit = new Button();
             btn_add = new Button();
             btn_exit = new Button();
-            panelViewParking = new Panel();
+            panelContainer = new Panel();
             SuspendLayout();
             // 
             // btn_view
@@ -47,6 +47,7 @@ namespace My_Parking
             btn_view.TabIndex = 1;
             btn_view.Text = "View Parking Areas";
             btn_view.UseVisualStyleBackColor = true;
+            btn_view.Click += btn_view_Click;
             // 
             // btn_remove
             // 
@@ -85,19 +86,20 @@ namespace My_Parking
             btn_exit.UseVisualStyleBackColor = true;
             btn_exit.Click += btn_exit_Click;
             // 
-            // panelViewParking
+            // panelContainer
             // 
-            panelViewParking.Location = new Point(224, 34);
-            panelViewParking.Name = "panelViewParking";
-            panelViewParking.Size = new Size(500, 300);
-            panelViewParking.TabIndex = 0;
+            panelContainer.Location = new Point(198, 22);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(590, 376);
+            panelContainer.TabIndex = 0;
+            panelContainer.Paint += panelViewParking_Paint;
             // 
             // ManageParkingForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panelViewParking);
+            Controls.Add(panelContainer);
             Controls.Add(btn_exit);
             Controls.Add(btn_add);
             Controls.Add(btn_edit);
@@ -115,6 +117,6 @@ namespace My_Parking
         private Button btn_edit;
         private Button btn_add;
         private Button btn_exit;
-        private Panel panelViewParking;
+        private Panel panelContainer;
     }
 }

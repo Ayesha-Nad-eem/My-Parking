@@ -375,7 +375,7 @@
             panelDelete.Controls.Add(txt_IDdelete);
             panelDelete.Controls.Add(label6);
             panelDelete.Controls.Add(dataGridViewDelete);
-            panelDelete.Location = new Point(208, 22);
+            panelDelete.Location = new Point(209, 22);
             panelDelete.Name = "panelDelete";
             panelDelete.Size = new Size(674, 369);
             panelDelete.TabIndex = 9;
