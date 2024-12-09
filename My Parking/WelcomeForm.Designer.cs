@@ -69,7 +69,7 @@
             // 
             btn_mngcomplains.Location = new Point(29, 243);
             btn_mngcomplains.Name = "btn_mngcomplains";
-            btn_mngcomplains.Size = new Size(127, 35);
+            btn_mngcomplains.Size = new Size(127, 40);
             btn_mngcomplains.TabIndex = 3;
             btn_mngcomplains.Text = "Manage Complaints";
             btn_mngcomplains.UseVisualStyleBackColor = true;
