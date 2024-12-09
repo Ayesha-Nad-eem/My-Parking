@@ -62,5 +62,24 @@ namespace My_Parking
             ViewParkingForm veiwParkingform = new ViewParkingForm();
             LoadFormInPanel(veiwParkingform);
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            AddParkingForm apf = new AddParkingForm();
+            LoadFormInPanel(apf);
+
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            EditParkingForm epf = new EditParkingForm();
+            LoadFormInPanel(epf);
+        }
+
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+            RemoveParkingForm rpf = new RemoveParkingForm();
+            LoadFormInPanel(rpf);
+        }
     }
 }

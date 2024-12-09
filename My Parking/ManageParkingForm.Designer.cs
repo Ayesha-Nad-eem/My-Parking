@@ -41,7 +41,7 @@ namespace My_Parking
             // 
             // btn_view
             // 
-            btn_view.Location = new Point(26, 34);
+            btn_view.Location = new Point(12, 32);
             btn_view.Name = "btn_view";
             btn_view.Size = new Size(149, 46);
             btn_view.TabIndex = 1;
@@ -51,34 +51,37 @@ namespace My_Parking
             // 
             // btn_remove
             // 
-            btn_remove.Location = new Point(26, 261);
+            btn_remove.Location = new Point(12, 249);
             btn_remove.Name = "btn_remove";
             btn_remove.Size = new Size(149, 46);
             btn_remove.TabIndex = 2;
             btn_remove.Text = "Remove Parking Area";
             btn_remove.UseVisualStyleBackColor = true;
+            btn_remove.Click += btn_remove_Click;
             // 
             // btn_edit
             // 
-            btn_edit.Location = new Point(26, 187);
+            btn_edit.Location = new Point(12, 179);
             btn_edit.Name = "btn_edit";
             btn_edit.Size = new Size(149, 46);
             btn_edit.TabIndex = 3;
             btn_edit.Text = "Edit Parking Area";
             btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.Click += btn_edit_Click;
             // 
             // btn_add
             // 
-            btn_add.Location = new Point(26, 111);
+            btn_add.Location = new Point(12, 111);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(149, 46);
             btn_add.TabIndex = 4;
             btn_add.Text = "Add Parking Area";
             btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += btn_add_Click;
             // 
             // btn_exit
             // 
-            btn_exit.Location = new Point(26, 338);
+            btn_exit.Location = new Point(12, 326);
             btn_exit.Name = "btn_exit";
             btn_exit.Size = new Size(149, 46);
             btn_exit.TabIndex = 5;
@@ -88,9 +91,9 @@ namespace My_Parking
             // 
             // panelContainer
             // 
-            panelContainer.Location = new Point(198, 22);
+            panelContainer.Location = new Point(167, 12);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(590, 376);
+            panelContainer.Size = new Size(647, 426);
             panelContainer.TabIndex = 0;
             panelContainer.Paint += panelViewParking_Paint;
             // 
@@ -98,7 +101,7 @@ namespace My_Parking
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(871, 450);
             Controls.Add(panelContainer);
             Controls.Add(btn_exit);
             Controls.Add(btn_add);

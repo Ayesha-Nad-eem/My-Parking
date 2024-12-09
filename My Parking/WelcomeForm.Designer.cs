@@ -82,6 +82,7 @@
             btn_exit.TabIndex = 4;
             btn_exit.Text = "Exit";
             btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.Click += btn_exit_Click_1;
             // 
             // WelcomeForm
             // 

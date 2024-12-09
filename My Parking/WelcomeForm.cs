@@ -58,5 +58,10 @@ namespace My_Parking
             this.Hide();
             mpf.FormClosed += (s, args) => this.Close();
         }
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
