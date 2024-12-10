@@ -73,6 +73,7 @@
             btn_mngcomplains.TabIndex = 3;
             btn_mngcomplains.Text = "Manage Complaints";
             btn_mngcomplains.UseVisualStyleBackColor = true;
+            btn_mngcomplains.Click += btn_mngcomplains_Click;
             // 
             // btn_exit
             // 

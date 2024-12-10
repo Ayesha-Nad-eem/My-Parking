@@ -25,20 +25,14 @@ namespace My_Parking
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            ManagePaymentsForm mpf = new ManagePaymentsForm();
+            this.Hide();
+            mpf.Show();
+            mpf.FormClosed += (s, args) => this.Close();
         }
+
 
         private void webView2Control_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_showMap_Click(object sender, EventArgs e)
         {
 
         }
@@ -62,6 +56,14 @@ namespace My_Parking
         private void btn_exit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_mngcomplains_Click(object sender, EventArgs e)
+        {
+            ManageComplainsForm mcf = new ManageComplainsForm();
+            mcf.Show();
+            this.Hide();
+            mcf.FormClosed += (s, args) => this.Close();
         }
     }
 }
