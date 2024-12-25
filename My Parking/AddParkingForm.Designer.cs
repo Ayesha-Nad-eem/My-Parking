@@ -162,6 +162,7 @@
             Controls.Add(lbl_latitude);
             Name = "AddParkingForm";
             Text = "AddParkingForm";
+            Load += AddParkingForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

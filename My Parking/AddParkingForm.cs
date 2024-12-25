@@ -63,5 +63,10 @@ namespace My_Parking
         {
 
         }
+
+        private void AddParkingForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
