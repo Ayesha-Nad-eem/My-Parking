@@ -15,6 +15,7 @@ namespace My_Parking
         public UserForm()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -36,14 +37,16 @@ namespace My_Parking
 
         private void btn_book_Click(object sender, EventArgs e)
         {
-
+            BookParkingForm bpf = new BookParkingForm();
+            bpf.MdiParent = this;
+            LoadFormInPanel(bpf);
         }
 
         private void UserForm_Load(object sender, EventArgs e)
         {
 
         }
-        private void LoadFormInPanel(Form form)
+        public void LoadFormInPanel(Form form)
         {
             // Clear the panel
             panelContainer.Controls.Clear();
