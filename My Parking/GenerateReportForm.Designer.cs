@@ -41,42 +41,47 @@
             // 
             // dateTimePickerStartDate
             // 
-            dateTimePickerStartDate.Location = new Point(276, 40);
+            dateTimePickerStartDate.Location = new Point(304, 57);
+            dateTimePickerStartDate.Margin = new Padding(7, 6, 7, 6);
             dateTimePickerStartDate.Name = "dateTimePickerStartDate";
-            dateTimePickerStartDate.Size = new Size(207, 23);
+            dateTimePickerStartDate.Size = new Size(439, 39);
             dateTimePickerStartDate.TabIndex = 0;
             // 
             // dateTimePickerEndDate
             // 
-            dateTimePickerEndDate.Location = new Point(276, 82);
+            dateTimePickerEndDate.Location = new Point(304, 123);
+            dateTimePickerEndDate.Margin = new Padding(7, 6, 7, 6);
             dateTimePickerEndDate.Name = "dateTimePickerEndDate";
-            dateTimePickerEndDate.Size = new Size(207, 23);
+            dateTimePickerEndDate.Size = new Size(439, 39);
             dateTimePickerEndDate.TabIndex = 1;
             // 
             // lbl_startDate
             // 
             lbl_startDate.AutoSize = true;
-            lbl_startDate.Location = new Point(207, 46);
+            lbl_startDate.Location = new Point(166, 63);
+            lbl_startDate.Margin = new Padding(7, 0, 7, 0);
             lbl_startDate.Name = "lbl_startDate";
-            lbl_startDate.Size = new Size(58, 15);
+            lbl_startDate.Size = new Size(124, 31);
             lbl_startDate.TabIndex = 2;
             lbl_startDate.Text = "Start Date";
             // 
             // lbl_endDate
             // 
             lbl_endDate.AutoSize = true;
-            lbl_endDate.Location = new Point(207, 88);
+            lbl_endDate.Location = new Point(166, 129);
+            lbl_endDate.Margin = new Padding(7, 0, 7, 0);
             lbl_endDate.Name = "lbl_endDate";
-            lbl_endDate.Size = new Size(54, 15);
+            lbl_endDate.Size = new Size(117, 31);
             lbl_endDate.TabIndex = 3;
             lbl_endDate.Text = "End Date";
             // 
             // lbl_status
             // 
             lbl_status.AutoSize = true;
-            lbl_status.Location = new Point(207, 126);
+            lbl_status.Location = new Point(166, 191);
+            lbl_status.Margin = new Padding(7, 0, 7, 0);
             lbl_status.Name = "lbl_status";
-            lbl_status.Size = new Size(39, 15);
+            lbl_status.Size = new Size(81, 31);
             lbl_status.TabIndex = 4;
             lbl_status.Text = "Status";
             // 
@@ -85,35 +90,43 @@
             combo_status.DropDownStyle = ComboBoxStyle.DropDownList;
             combo_status.FormattingEnabled = true;
             combo_status.Items.AddRange(new object[] { "Pending", "Paid", "Cancelled" });
-            combo_status.Location = new Point(276, 123);
+            combo_status.Location = new Point(304, 188);
+            combo_status.Margin = new Padding(7, 6, 7, 6);
             combo_status.Name = "combo_status";
-            combo_status.Size = new Size(207, 23);
+            combo_status.Size = new Size(439, 39);
             combo_status.TabIndex = 5;
             // 
             // dataGridViewReport
             // 
             dataGridViewReport.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewReport.Location = new Point(69, 187);
+            dataGridViewReport.Location = new Point(16, 374);
+            dataGridViewReport.Margin = new Padding(7, 6, 7, 6);
             dataGridViewReport.Name = "dataGridViewReport";
+            dataGridViewReport.RowHeadersWidth = 82;
             dataGridViewReport.RowTemplate.Height = 25;
-            dataGridViewReport.Size = new Size(701, 209);
+            dataGridViewReport.Size = new Size(1468, 432);
             dataGridViewReport.TabIndex = 6;
             // 
             // btn_report
             // 
-            btn_report.Location = new Point(534, 117);
+            btn_report.BackColor = Color.Maroon;
+            btn_report.FlatAppearance.BorderSize = 0;
+            btn_report.FlatStyle = FlatStyle.Flat;
+            btn_report.ForeColor = Color.White;
+            btn_report.Location = new Point(304, 267);
+            btn_report.Margin = new Padding(7, 6, 7, 6);
             btn_report.Name = "btn_report";
-            btn_report.Size = new Size(131, 32);
+            btn_report.Size = new Size(280, 66);
             btn_report.TabIndex = 7;
             btn_report.Text = "Generate Report";
-            btn_report.UseVisualStyleBackColor = true;
+            btn_report.UseVisualStyleBackColor = false;
             btn_report.Click += btn_report_Click;
             // 
             // GenerateReportForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(15F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1500, 852);
             Controls.Add(btn_report);
             Controls.Add(dataGridViewReport);
             Controls.Add(combo_status);
@@ -122,6 +135,8 @@
             Controls.Add(lbl_startDate);
             Controls.Add(dateTimePickerEndDate);
             Controls.Add(dateTimePickerStartDate);
+            Font = new Font("Times New Roman", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(7, 6, 7, 6);
             Name = "GenerateReportForm";
             Text = "GenerateReportForm";
             Load += GenerateReportForm_Load;

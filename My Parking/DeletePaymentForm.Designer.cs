@@ -38,47 +38,59 @@
             // dataGridViewPayments
             // 
             dataGridViewPayments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPayments.Location = new Point(12, 3);
+            dataGridViewPayments.Location = new Point(25, 6);
+            dataGridViewPayments.Margin = new Padding(7, 6, 7, 6);
             dataGridViewPayments.Name = "dataGridViewPayments";
+            dataGridViewPayments.RowHeadersWidth = 82;
             dataGridViewPayments.RowTemplate.Height = 25;
-            dataGridViewPayments.Size = new Size(733, 327);
+            dataGridViewPayments.Size = new Size(1485, 676);
             dataGridViewPayments.TabIndex = 1;
             // 
             // btn_Delete
             // 
-            btn_Delete.Location = new Point(576, 359);
+            btn_Delete.BackColor = Color.FromArgb(192, 0, 0);
+            btn_Delete.FlatAppearance.BorderSize = 0;
+            btn_Delete.FlatStyle = FlatStyle.Flat;
+            btn_Delete.ForeColor = Color.White;
+            btn_Delete.Location = new Point(456, 811);
+            btn_Delete.Margin = new Padding(7, 6, 7, 6);
             btn_Delete.Name = "btn_Delete";
-            btn_Delete.Size = new Size(121, 36);
+            btn_Delete.Size = new Size(260, 75);
             btn_Delete.TabIndex = 2;
             btn_Delete.Text = "Delete";
-            btn_Delete.UseVisualStyleBackColor = true;
+            btn_Delete.UseVisualStyleBackColor = false;
             btn_Delete.Click += btn_Delete_Click;
             // 
             // lbl_ID
             // 
             lbl_ID.AutoSize = true;
-            lbl_ID.Location = new Point(351, 370);
+            lbl_ID.Location = new Point(385, 749);
+            lbl_ID.Margin = new Padding(7, 0, 7, 0);
             lbl_ID.Name = "lbl_ID";
-            lbl_ID.Size = new Size(18, 15);
+            lbl_ID.Size = new Size(41, 31);
             lbl_ID.TabIndex = 3;
             lbl_ID.Text = "ID";
             // 
             // txt_ID
             // 
-            txt_ID.Location = new Point(387, 367);
+            txt_ID.Location = new Point(456, 742);
+            txt_ID.Margin = new Padding(7, 6, 7, 6);
             txt_ID.Name = "txt_ID";
-            txt_ID.Size = new Size(157, 23);
+            txt_ID.Size = new Size(332, 39);
             txt_ID.TabIndex = 4;
             // 
             // DeletePaymentForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(15F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1526, 923);
             Controls.Add(txt_ID);
             Controls.Add(lbl_ID);
             Controls.Add(btn_Delete);
             Controls.Add(dataGridViewPayments);
+            Font = new Font("Times New Roman", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(7, 6, 7, 6);
             Name = "DeletePaymentForm";
             Text = "DeletePaymentForm";
             Load += DeletePaymentForm_Load;
