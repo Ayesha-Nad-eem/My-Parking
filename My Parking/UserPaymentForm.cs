@@ -65,6 +65,10 @@ namespace My_Parking
 
             // Store the payment details in the database
             StorePaymentDetails();
+            UserForm uf = new UserForm();
+            uf.Show();
+            this.Hide();
+            uf.FormClosed += (s, args) => this.Close();
         }
         private void StorePaymentDetails()
         {

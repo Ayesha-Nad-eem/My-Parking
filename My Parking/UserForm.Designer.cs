@@ -83,10 +83,10 @@
             // 
             panelContainer.BackColor = Color.Transparent;
             panelContainer.Dock = DockStyle.Fill;
-            panelContainer.Location = new Point(210, 0);
+            panelContainer.Location = new Point(374, 0);
             panelContainer.Margin = new Padding(7, 6, 7, 6);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(528, 351);
+            panelContainer.Size = new Size(645, 749);
             panelContainer.TabIndex = 4;
             panelContainer.Paint += panelUserForm_Paint;
             // 
@@ -100,7 +100,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(210, 351);
+            panel1.Size = new Size(374, 749);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -122,7 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(738, 351);
+            ClientSize = new Size(1019, 749);
             Controls.Add(panelContainer);
             Controls.Add(panel1);
             Font = new Font("Times New Roman", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);

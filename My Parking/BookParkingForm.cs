@@ -32,17 +32,12 @@ namespace My_Parking
                 return;  // Exit the method if the ID is invalid
             }
 
-            // Ensure that MdiParent is of type UserForm
-            if (this.MdiParent is UserForm userForm)
-            {
-                UserPaymentForm upf = new UserPaymentForm(); // Add parameters if needed in the constructor
-                userForm.LoadFormInPanel(upf);  // Use the MDI parent's method to load the form
-            }
-            else
-            {
-                MessageBox.Show("Invalid MDI Parent", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+
+            UserPaymentForm sf = new UserPaymentForm();
+            sf.Show();
+            this.Hide();
+            sf.FormClosed += (s, args) => this.Close();
+
         }
 
         private void BookParkingForm_Load(object sender, EventArgs e)
@@ -57,6 +52,11 @@ namespace My_Parking
 
                 dataGridViewParkings.DataSource = dataTable; // Assuming you have a DataGridView named dataGridViewUsers
             }
+        }
+
+        private void dataGridViewParkings_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

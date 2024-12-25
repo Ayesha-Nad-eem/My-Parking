@@ -45,6 +45,7 @@
             dataGridViewParkings.RowTemplate.Height = 25;
             dataGridViewParkings.Size = new Size(1494, 578);
             dataGridViewParkings.TabIndex = 0;
+            dataGridViewParkings.CellContentClick += dataGridViewParkings_CellContentClick;
             // 
             // lbl_ID
             // 
@@ -52,7 +53,7 @@
             lbl_ID.Location = new Point(492, 678);
             lbl_ID.Margin = new Padding(7, 0, 7, 0);
             lbl_ID.Name = "lbl_ID";
-            lbl_ID.Size = new Size(41, 31);
+            lbl_ID.Size = new Size(22, 16);
             lbl_ID.TabIndex = 1;
             lbl_ID.Text = "ID";
             // 
@@ -61,7 +62,7 @@
             txt_ID.Location = new Point(547, 675);
             txt_ID.Margin = new Padding(7, 6, 7, 6);
             txt_ID.Name = "txt_ID";
-            txt_ID.Size = new Size(296, 39);
+            txt_ID.Size = new Size(296, 23);
             txt_ID.TabIndex = 2;
             // 
             // btn_confirmBooking
@@ -81,9 +82,9 @@
             // 
             // BookParkingForm
             // 
-            AutoScaleDimensions = new SizeF(15F, 31F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1526, 923);
+            ClientSize = new Size(1370, 749);
             Controls.Add(btn_confirmBooking);
             Controls.Add(txt_ID);
             Controls.Add(lbl_ID);

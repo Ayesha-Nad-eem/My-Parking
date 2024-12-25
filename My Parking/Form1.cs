@@ -131,5 +131,10 @@ namespace My_Parking
             this.Hide();
             sf.FormClosed += (s, args) => this.Close();
         }
+
+        private void login_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

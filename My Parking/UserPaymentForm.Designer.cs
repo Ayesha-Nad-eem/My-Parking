@@ -36,7 +36,7 @@
             // 
             // btn_confirm
             // 
-            btn_confirm.Location = new Point(304, 204);
+            btn_confirm.Location = new Point(184, 184);
             btn_confirm.Name = "btn_confirm";
             btn_confirm.Size = new Size(129, 40);
             btn_confirm.TabIndex = 0;
@@ -47,7 +47,7 @@
             // lbl_paymentMethod
             // 
             lbl_paymentMethod.AutoSize = true;
-            lbl_paymentMethod.Location = new Point(202, 91);
+            lbl_paymentMethod.Location = new Point(82, 71);
             lbl_paymentMethod.Name = "lbl_paymentMethod";
             lbl_paymentMethod.Size = new Size(142, 15);
             lbl_paymentMethod.TabIndex = 1;
@@ -56,7 +56,7 @@
             // lbl_amount
             // 
             lbl_amount.AutoSize = true;
-            lbl_amount.Location = new Point(333, 154);
+            lbl_amount.Location = new Point(213, 134);
             lbl_amount.Name = "lbl_amount";
             lbl_amount.Size = new Size(51, 15);
             lbl_amount.TabIndex = 2;
@@ -67,7 +67,7 @@
             cmb_paymentMethod.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_paymentMethod.FormattingEnabled = true;
             cmb_paymentMethod.Items.AddRange(new object[] { "Cash", "Online Payment", "Others" });
-            cmb_paymentMethod.Location = new Point(395, 88);
+            cmb_paymentMethod.Location = new Point(275, 68);
             cmb_paymentMethod.Name = "cmb_paymentMethod";
             cmb_paymentMethod.Size = new Size(121, 23);
             cmb_paymentMethod.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(838, 436);
+            ClientSize = new Size(500, 306);
             Controls.Add(cmb_paymentMethod);
             Controls.Add(lbl_amount);
             Controls.Add(lbl_paymentMethod);
