@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,16 @@ namespace My_Parking
 {
     public partial class SignupForm : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeft,
+            int nTop,
+            int nRight,
+            int nBottom,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
         public SignupForm()
         {
             InitializeComponent();
@@ -83,6 +94,17 @@ namespace My_Parking
         private void txt_username_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbl_ph_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+            btn_signup.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_signup.Width, btn_signup.Height, 30, 30));
+            signup_panel.BackColor = Color.FromArgb(150, 128, 128, 128);
         }
     }
 }

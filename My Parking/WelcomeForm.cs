@@ -20,7 +20,7 @@ namespace My_Parking
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
-
+            admin_dashboard_panel.BackColor = Color.FromArgb(150, 128, 128, 128);
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -75,69 +75,99 @@
             // 
             // btn_view
             // 
-            btn_view.Location = new Point(36, 32);
+            btn_view.BackColor = Color.Maroon;
+            btn_view.FlatAppearance.BorderSize = 0;
+            btn_view.FlatStyle = FlatStyle.Flat;
+            btn_view.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_view.ForeColor = Color.White;
+            btn_view.ImageAlign = ContentAlignment.BottomCenter;
+            btn_view.Location = new Point(67, 68);
+            btn_view.Margin = new Padding(6);
             btn_view.Name = "btn_view";
-            btn_view.Size = new Size(149, 46);
+            btn_view.Size = new Size(277, 98);
             btn_view.TabIndex = 0;
-            btn_view.Text = "View All Users";
-            btn_view.UseVisualStyleBackColor = true;
+            btn_view.Text = "View Users";
+            btn_view.UseVisualStyleBackColor = false;
             btn_view.Click += btn_view_Click;
             // 
             // btn_add
             // 
-            btn_add.Location = new Point(36, 103);
+            btn_add.BackColor = Color.Maroon;
+            btn_add.FlatAppearance.BorderSize = 0;
+            btn_add.Font = new Font("Times New Roman", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_add.ForeColor = Color.White;
+            btn_add.Location = new Point(67, 220);
+            btn_add.Margin = new Padding(6);
             btn_add.Name = "btn_add";
-            btn_add.Size = new Size(149, 46);
+            btn_add.Size = new Size(277, 98);
             btn_add.TabIndex = 1;
-            btn_add.Text = "Add New User";
-            btn_add.UseVisualStyleBackColor = true;
+            btn_add.Text = "Add User";
+            btn_add.UseVisualStyleBackColor = false;
             btn_add.Click += btn_add_Click;
             // 
             // btn_edit
             // 
-            btn_edit.Location = new Point(36, 172);
+            btn_edit.BackColor = Color.Maroon;
+            btn_edit.FlatAppearance.BorderSize = 0;
+            btn_edit.FlatStyle = FlatStyle.Flat;
+            btn_edit.Font = new Font("Times New Roman", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_edit.ForeColor = Color.White;
+            btn_edit.Location = new Point(67, 367);
+            btn_edit.Margin = new Padding(6);
             btn_edit.Name = "btn_edit";
-            btn_edit.Size = new Size(149, 46);
+            btn_edit.Size = new Size(277, 98);
             btn_edit.TabIndex = 2;
-            btn_edit.Text = "Edit User Information";
-            btn_edit.UseVisualStyleBackColor = true;
+            btn_edit.Text = "Edit User";
+            btn_edit.UseVisualStyleBackColor = false;
             btn_edit.Click += btn_edit_Click;
             // 
             // btn_del
             // 
-            btn_del.Location = new Point(36, 243);
+            btn_del.BackColor = Color.Maroon;
+            btn_del.FlatStyle = FlatStyle.Flat;
+            btn_del.Font = new Font("Times New Roman", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_del.ForeColor = Color.White;
+            btn_del.Location = new Point(67, 518);
+            btn_del.Margin = new Padding(6);
             btn_del.Name = "btn_del";
-            btn_del.Size = new Size(149, 46);
+            btn_del.Size = new Size(277, 98);
             btn_del.TabIndex = 3;
             btn_del.Text = "Delete User";
-            btn_del.UseVisualStyleBackColor = true;
+            btn_del.UseVisualStyleBackColor = false;
             btn_del.Click += btn_del_Click;
             // 
             // btn_exit
             // 
-            btn_exit.Location = new Point(36, 318);
+            btn_exit.BackColor = Color.Maroon;
+            btn_exit.Font = new Font("Times New Roman", 13.875F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_exit.ForeColor = Color.White;
+            btn_exit.Location = new Point(67, 678);
+            btn_exit.Margin = new Padding(6);
             btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(149, 46);
+            btn_exit.Size = new Size(277, 98);
             btn_exit.TabIndex = 4;
             btn_exit.Text = "Exit";
-            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.UseVisualStyleBackColor = false;
             btn_exit.Click += btn_exit_Click;
             // 
             // panelView
             // 
             panelView.Controls.Add(dataGridViewUser);
-            panelView.Location = new Point(219, 22);
+            panelView.Location = new Point(423, 47);
+            panelView.Margin = new Padding(6);
             panelView.Name = "panelView";
-            panelView.Size = new Size(644, 363);
+            panelView.Size = new Size(1196, 774);
             panelView.TabIndex = 5;
             // 
             // dataGridViewUser
             // 
             dataGridViewUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUser.Location = new Point(50, 23);
+            dataGridViewUser.Location = new Point(93, 49);
+            dataGridViewUser.Margin = new Padding(6);
             dataGridViewUser.Name = "dataGridViewUser";
+            dataGridViewUser.RowHeadersWidth = 82;
             dataGridViewUser.RowTemplate.Height = 25;
-            dataGridViewUser.Size = new Size(539, 247);
+            dataGridViewUser.Size = new Size(1001, 527);
             dataGridViewUser.TabIndex = 0;
             dataGridViewUser.CellContentClick += dataGridViewUser_CellContentClick;
             // 
@@ -153,17 +183,20 @@
             panelAdd.Controls.Add(txt_username);
             panelAdd.Controls.Add(lbl_Password);
             panelAdd.Controls.Add(lbl_UserName);
-            panelAdd.Location = new Point(228, 22);
+            panelAdd.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            panelAdd.Location = new Point(423, 47);
+            panelAdd.Margin = new Padding(6);
             panelAdd.Name = "panelAdd";
-            panelAdd.Size = new Size(644, 363);
+            panelAdd.Size = new Size(1196, 774);
             panelAdd.TabIndex = 7;
             panelAdd.Paint += panelAdd_Paint;
             // 
             // btn_clear
             // 
-            btn_clear.Location = new Point(300, 236);
+            btn_clear.Location = new Point(554, 503);
+            btn_clear.Margin = new Padding(6);
             btn_clear.Name = "btn_clear";
-            btn_clear.Size = new Size(75, 23);
+            btn_clear.Size = new Size(139, 49);
             btn_clear.TabIndex = 26;
             btn_clear.Text = "Clear";
             btn_clear.UseVisualStyleBackColor = true;
@@ -171,75 +204,88 @@
             // 
             // btn_adduser
             // 
-            btn_adduser.Location = new Point(215, 236);
+            btn_adduser.BackColor = Color.Maroon;
+            btn_adduser.FlatAppearance.BorderSize = 0;
+            btn_adduser.FlatStyle = FlatStyle.Flat;
+            btn_adduser.ForeColor = Color.White;
+            btn_adduser.Location = new Point(370, 503);
+            btn_adduser.Margin = new Padding(6);
             btn_adduser.Name = "btn_adduser";
-            btn_adduser.Size = new Size(75, 23);
+            btn_adduser.Size = new Size(139, 49);
             btn_adduser.TabIndex = 25;
             btn_adduser.Text = "Add";
-            btn_adduser.UseVisualStyleBackColor = true;
+            btn_adduser.UseVisualStyleBackColor = false;
             btn_adduser.Click += btn_adduser_Click;
             // 
             // txt_ph
             // 
-            txt_ph.Location = new Point(199, 187);
+            txt_ph.Location = new Point(370, 399);
+            txt_ph.Margin = new Padding(6);
             txt_ph.Name = "txt_ph";
-            txt_ph.Size = new Size(176, 23);
+            txt_ph.Size = new Size(323, 35);
             txt_ph.TabIndex = 24;
             // 
             // txt_email
             // 
-            txt_email.Location = new Point(199, 132);
+            txt_email.Location = new Point(370, 282);
+            txt_email.Margin = new Padding(6);
             txt_email.Name = "txt_email";
-            txt_email.Size = new Size(176, 23);
+            txt_email.Size = new Size(323, 35);
             txt_email.TabIndex = 23;
             // 
             // lbl_ph
             // 
             lbl_ph.AutoSize = true;
-            lbl_ph.Location = new Point(114, 190);
+            lbl_ph.Location = new Point(212, 405);
+            lbl_ph.Margin = new Padding(6, 0, 6, 0);
             lbl_ph.Name = "lbl_ph";
-            lbl_ph.Size = new Size(61, 15);
+            lbl_ph.Size = new Size(109, 27);
             lbl_ph.TabIndex = 22;
             lbl_ph.Text = "Phone no.";
             // 
             // lbl_email
             // 
             lbl_email.AutoSize = true;
-            lbl_email.Location = new Point(114, 135);
+            lbl_email.Location = new Point(212, 288);
+            lbl_email.Margin = new Padding(6, 0, 6, 0);
             lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(36, 15);
+            lbl_email.Size = new Size(68, 27);
             lbl_email.TabIndex = 21;
             lbl_email.Text = "Email";
             // 
             // txt_password
             // 
-            txt_password.Location = new Point(199, 72);
+            txt_password.Location = new Point(370, 154);
+            txt_password.Margin = new Padding(6);
             txt_password.Name = "txt_password";
-            txt_password.Size = new Size(176, 23);
+            txt_password.Size = new Size(323, 35);
             txt_password.TabIndex = 20;
             // 
             // txt_username
             // 
-            txt_username.Location = new Point(199, 20);
+            txt_username.Location = new Point(370, 43);
+            txt_username.Margin = new Padding(6);
             txt_username.Name = "txt_username";
-            txt_username.Size = new Size(176, 23);
+            txt_username.Size = new Size(323, 35);
             txt_username.TabIndex = 19;
             // 
             // lbl_Password
             // 
             lbl_Password.AutoSize = true;
-            lbl_Password.Location = new Point(114, 75);
+            lbl_Password.Location = new Point(212, 160);
+            lbl_Password.Margin = new Padding(6, 0, 6, 0);
             lbl_Password.Name = "lbl_Password";
-            lbl_Password.Size = new Size(57, 15);
+            lbl_Password.Size = new Size(104, 27);
             lbl_Password.TabIndex = 18;
             lbl_Password.Text = "Password";
             // 
             // lbl_UserName
             // 
             lbl_UserName.AutoSize = true;
-            lbl_UserName.Location = new Point(111, 23);
+            lbl_UserName.Location = new Point(206, 49);
+            lbl_UserName.Margin = new Padding(6, 0, 6, 0);
             lbl_UserName.Name = "lbl_UserName";
-            lbl_UserName.Size = new Size(60, 15);
+            lbl_UserName.Size = new Size(108, 27);
             lbl_UserName.TabIndex = 17;
             lbl_UserName.Text = "Username";
             // 
@@ -257,32 +303,37 @@
             panelEdit.Controls.Add(txt_nameedit);
             panelEdit.Controls.Add(label3);
             panelEdit.Controls.Add(label4);
-            panelEdit.Location = new Point(222, 22);
+            panelEdit.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            panelEdit.Location = new Point(423, 47);
+            panelEdit.Margin = new Padding(6);
             panelEdit.Name = "panelEdit";
-            panelEdit.Size = new Size(644, 363);
+            panelEdit.Size = new Size(1196, 774);
             panelEdit.TabIndex = 8;
             // 
             // txt_IDedit
             // 
-            txt_IDedit.Location = new Point(242, 20);
+            txt_IDedit.Location = new Point(438, 43);
+            txt_IDedit.Margin = new Padding(6);
             txt_IDedit.Name = "txt_IDedit";
-            txt_IDedit.Size = new Size(176, 23);
+            txt_IDedit.Size = new Size(323, 35);
             txt_IDedit.TabIndex = 38;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(175, 23);
+            label5.Location = new Point(293, 51);
+            label5.Margin = new Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new Size(18, 15);
+            label5.Size = new Size(37, 27);
             label5.TabIndex = 37;
             label5.Text = "ID";
             // 
             // btn_clearedit
             // 
-            btn_clearedit.Location = new Point(343, 276);
+            btn_clearedit.Location = new Point(622, 589);
+            btn_clearedit.Margin = new Padding(6);
             btn_clearedit.Name = "btn_clearedit";
-            btn_clearedit.Size = new Size(75, 23);
+            btn_clearedit.Size = new Size(139, 49);
             btn_clearedit.TabIndex = 36;
             btn_clearedit.Text = "Clear";
             btn_clearedit.UseVisualStyleBackColor = true;
@@ -290,83 +341,98 @@
             // 
             // btn_saveedit
             // 
-            btn_saveedit.Location = new Point(258, 276);
+            btn_saveedit.BackColor = Color.Maroon;
+            btn_saveedit.FlatAppearance.BorderSize = 0;
+            btn_saveedit.FlatStyle = FlatStyle.Flat;
+            btn_saveedit.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_saveedit.ForeColor = Color.WhiteSmoke;
+            btn_saveedit.Location = new Point(449, 589);
+            btn_saveedit.Margin = new Padding(6);
             btn_saveedit.Name = "btn_saveedit";
-            btn_saveedit.Size = new Size(75, 23);
+            btn_saveedit.Size = new Size(139, 49);
             btn_saveedit.TabIndex = 35;
             btn_saveedit.Text = "Save Edit";
-            btn_saveedit.UseVisualStyleBackColor = true;
+            btn_saveedit.UseVisualStyleBackColor = false;
             btn_saveedit.Click += btn_saveedit_Click;
             // 
             // txt_phoneedit
             // 
-            txt_phoneedit.Location = new Point(242, 227);
+            txt_phoneedit.Location = new Point(438, 476);
+            txt_phoneedit.Margin = new Padding(6);
             txt_phoneedit.Name = "txt_phoneedit";
-            txt_phoneedit.Size = new Size(176, 23);
+            txt_phoneedit.Size = new Size(323, 35);
             txt_phoneedit.TabIndex = 34;
             // 
             // txt_emailedit
             // 
-            txt_emailedit.Location = new Point(242, 172);
+            txt_emailedit.Location = new Point(438, 364);
+            txt_emailedit.Margin = new Padding(6);
             txt_emailedit.Name = "txt_emailedit";
-            txt_emailedit.Size = new Size(176, 23);
+            txt_emailedit.Size = new Size(323, 35);
             txt_emailedit.TabIndex = 33;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(157, 230);
+            label1.Location = new Point(293, 484);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(61, 15);
+            label1.Size = new Size(109, 27);
             label1.TabIndex = 32;
             label1.Text = "Phone no.";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(157, 175);
+            label2.Location = new Point(293, 367);
+            label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(36, 15);
+            label2.Size = new Size(68, 27);
             label2.TabIndex = 31;
             label2.Text = "Email";
             // 
             // txt_passedit
             // 
-            txt_passedit.Location = new Point(242, 112);
+            txt_passedit.Location = new Point(438, 234);
+            txt_passedit.Margin = new Padding(6);
             txt_passedit.Name = "txt_passedit";
-            txt_passedit.Size = new Size(176, 23);
+            txt_passedit.Size = new Size(323, 35);
             txt_passedit.TabIndex = 30;
             // 
             // txt_nameedit
             // 
-            txt_nameedit.Location = new Point(242, 60);
+            txt_nameedit.Location = new Point(438, 131);
+            txt_nameedit.Margin = new Padding(6);
             txt_nameedit.Name = "txt_nameedit";
-            txt_nameedit.Size = new Size(176, 23);
+            txt_nameedit.Size = new Size(323, 35);
             txt_nameedit.TabIndex = 29;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(157, 115);
+            label3.Location = new Point(293, 242);
+            label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(57, 15);
+            label3.Size = new Size(104, 27);
             label3.TabIndex = 28;
             label3.Text = "Password";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(154, 63);
+            label4.Location = new Point(293, 131);
+            label4.Margin = new Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new Size(60, 15);
+            label4.Size = new Size(108, 27);
             label4.TabIndex = 27;
             label4.Text = "Username";
             // 
             // panelDefault
             // 
-            panelDefault.Location = new Point(228, 22);
+            panelDefault.Location = new Point(423, 47);
+            panelDefault.Margin = new Padding(6);
             panelDefault.Name = "panelDefault";
-            panelDefault.Size = new Size(644, 363);
+            panelDefault.Size = new Size(1196, 774);
             panelDefault.TabIndex = 6;
             // 
             // panelDelete
@@ -375,54 +441,65 @@
             panelDelete.Controls.Add(txt_IDdelete);
             panelDelete.Controls.Add(label6);
             panelDelete.Controls.Add(dataGridViewDelete);
-            panelDelete.Location = new Point(209, 22);
+            panelDelete.Location = new Point(423, 47);
+            panelDelete.Margin = new Padding(6);
             panelDelete.Name = "panelDelete";
-            panelDelete.Size = new Size(674, 369);
+            panelDelete.Size = new Size(1252, 787);
             panelDelete.TabIndex = 9;
             panelDelete.Paint += panelDelete_Paint;
             // 
             // btn_confirmdel
             // 
-            btn_confirmdel.Location = new Point(492, 280);
+            btn_confirmdel.BackColor = Color.Maroon;
+            btn_confirmdel.FlatAppearance.BorderSize = 0;
+            btn_confirmdel.FlatStyle = FlatStyle.Flat;
+            btn_confirmdel.Font = new Font("Times New Roman", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_confirmdel.ForeColor = Color.White;
+            btn_confirmdel.Location = new Point(914, 597);
+            btn_confirmdel.Margin = new Padding(6);
             btn_confirmdel.Name = "btn_confirmdel";
-            btn_confirmdel.Size = new Size(96, 27);
+            btn_confirmdel.Size = new Size(178, 58);
             btn_confirmdel.TabIndex = 4;
             btn_confirmdel.Text = "Delete";
-            btn_confirmdel.UseVisualStyleBackColor = true;
+            btn_confirmdel.UseVisualStyleBackColor = false;
             btn_confirmdel.Click += btn_confirmdel_Click;
             // 
             // txt_IDdelete
             // 
-            txt_IDdelete.Location = new Point(220, 288);
+            txt_IDdelete.Location = new Point(409, 614);
+            txt_IDdelete.Margin = new Padding(6);
             txt_IDdelete.Name = "txt_IDdelete";
-            txt_IDdelete.Size = new Size(162, 23);
+            txt_IDdelete.Size = new Size(297, 39);
             txt_IDdelete.TabIndex = 3;
             txt_IDdelete.TextChanged += txt_IDdelete_TextChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(135, 292);
+            label6.Location = new Point(232, 623);
+            label6.Margin = new Padding(6, 0, 6, 0);
             label6.Name = "label6";
-            label6.Size = new Size(74, 15);
+            label6.Size = new Size(155, 32);
             label6.TabIndex = 2;
             label6.Text = "ID to Delete: ";
             // 
             // dataGridViewDelete
             // 
             dataGridViewDelete.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDelete.Location = new Point(54, 9);
+            dataGridViewDelete.Location = new Point(100, 19);
+            dataGridViewDelete.Margin = new Padding(6);
             dataGridViewDelete.Name = "dataGridViewDelete";
+            dataGridViewDelete.RowHeadersWidth = 82;
             dataGridViewDelete.RowTemplate.Height = 25;
-            dataGridViewDelete.Size = new Size(557, 241);
+            dataGridViewDelete.Size = new Size(1034, 514);
             dataGridViewDelete.TabIndex = 1;
             dataGridViewDelete.CellContentClick += dataGridViewDelete_CellContentClick;
             // 
             // ManageUsersForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 411);
+            ClientSize = new Size(1627, 784);
             Controls.Add(panelDelete);
             Controls.Add(panelView);
             Controls.Add(panelEdit);
@@ -433,8 +510,10 @@
             Controls.Add(btn_edit);
             Controls.Add(btn_add);
             Controls.Add(btn_view);
+            Margin = new Padding(6);
             Name = "ManageUsersForm";
             Text = "ManageUsersForm";
+            WindowState = FormWindowState.Maximized;
             Load += ManageUsersForm_Load;
             panelView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewUser).EndInit();

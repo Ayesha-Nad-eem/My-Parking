@@ -1,10 +1,21 @@
 using System;
 using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 namespace My_Parking
 {
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeft,
+            int nTop,
+            int nRight,
+            int nBottom,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
         public Form1()
         {
             InitializeComponent();
@@ -53,7 +64,7 @@ namespace My_Parking
                     }
                     else
                     {
-                        MessageBox.Show("Error: Incorrect Username or Password","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error: Incorrect Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -92,6 +103,13 @@ namespace My_Parking
             sf.Show();
             this.Hide();
             sf.FormClosed += (s, args) => this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            login_panel.BackColor = Color.FromArgb(200, 128, 128, 128);
+            btn_login.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_login.Width, btn_login.Height, 30, 30));
+
         }
     }
 }
