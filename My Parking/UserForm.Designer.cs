@@ -28,46 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btn_book = new Button();
+            btn_complain = new Button();
+            btn_settings = new Button();
+            btn_exit = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btn_book
             // 
-            button1.Location = new Point(42, 39);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btn_book.Location = new Point(21, 51);
+            btn_book.Name = "btn_book";
+            btn_book.Size = new Size(159, 56);
+            btn_book.TabIndex = 0;
+            btn_book.Text = "Book Parking Area";
+            btn_book.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_complain
             // 
-            button2.Location = new Point(42, 161);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btn_complain.Location = new Point(21, 126);
+            btn_complain.Name = "btn_complain";
+            btn_complain.Size = new Size(159, 59);
+            btn_complain.TabIndex = 1;
+            btn_complain.Text = "File Complain";
+            btn_complain.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_settings
             // 
-            button3.Location = new Point(42, 278);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btn_settings.Location = new Point(21, 212);
+            btn_settings.Name = "btn_settings";
+            btn_settings.Size = new Size(159, 57);
+            btn_settings.TabIndex = 2;
+            btn_settings.Text = "Account Settings";
+            btn_settings.UseVisualStyleBackColor = true;
+            // 
+            // btn_exit
+            // 
+            btn_exit.Location = new Point(21, 298);
+            btn_exit.Name = "btn_exit";
+            btn_exit.Size = new Size(159, 57);
+            btn_exit.TabIndex = 3;
+            btn_exit.Text = "Exit";
+            btn_exit.UseVisualStyleBackColor = true;
+            btn_exit.Click += btn_exit_Click;
             // 
             // UserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(884, 411);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_exit);
+            Controls.Add(btn_settings);
+            Controls.Add(btn_complain);
+            Controls.Add(btn_book);
             Name = "UserForm";
             Text = "UserForm";
             ResumeLayout(false);
@@ -75,8 +87,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btn_book;
+        private Button btn_complain;
+        private Button btn_settings;
+        private Button btn_exit;
     }
 }

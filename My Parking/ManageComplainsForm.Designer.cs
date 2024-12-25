@@ -70,6 +70,7 @@
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(647, 426);
             panelContainer.TabIndex = 3;
+            panelContainer.Paint += panelContainer_Paint;
             // 
             // ManageComplainsForm
             // 

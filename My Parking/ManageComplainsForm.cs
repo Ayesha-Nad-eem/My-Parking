@@ -51,6 +51,12 @@ namespace My_Parking
 
         private void btn_updateStatus_Click(object sender, EventArgs e)
         {
+            UpdateComplainForm uf = new UpdateComplainForm();
+            LoadFormInPanel(uf);
+        }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

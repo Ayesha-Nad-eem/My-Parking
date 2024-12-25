@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,29 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
-using System.Data.SqlClient;
 
 namespace My_Parking
 {
-    public partial class UpdateComplainForm : Form
+    public partial class UpdatePaymentForm : Form
     {
-        public UpdateComplainForm()
+        public UpdatePaymentForm()
         {
             InitializeComponent();
         }
 
-        private void UpdateComplainForm_Load(object sender, EventArgs e)
+        private void btn_clear_Click(object sender, EventArgs e)
         {
-
+            txt_ID.Text = "";
+            combo_status.Text = "";
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(txt_ID.Text))
             {
-                MessageBox.Show("Complaint ID cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Payment ID cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -55,7 +54,7 @@ namespace My_Parking
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     // Check if complaint exists
-                    string checkQuery = "SELECT COUNT(*) FROM Complaints WHERE ID = @id";
+                    string checkQuery = "SELECT COUNT(*) FROM Payments WHERE ID = @id";
                     using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
                     {
                         checkCommand.Parameters.AddWithValue("@id", complaintId);
@@ -65,13 +64,13 @@ namespace My_Parking
 
                         if (count == 0)
                         {
-                            MessageBox.Show("No complaint found with the provided ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("No Payment found with the provided ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
                     }
 
                     // Update the complaint status
-                    string updateQuery = "UPDATE Complaints SET Status = @status WHERE ID = @id";
+                    string updateQuery = "UPDATE Payments SET Status = @status WHERE ID = @id";
                     using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
                     {
                         updateCommand.Parameters.AddWithValue("@status", newStatus);
@@ -80,14 +79,14 @@ namespace My_Parking
                         int rowsAffected = updateCommand.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("Complaint status updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Payment status updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // Clear input fields after successful update
                             txt_ID.Clear();
                             combo_status.SelectedIndex = -1;
                         }
                         else
                         {
-                            MessageBox.Show("Failed to update the complaint status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Failed to update the payment status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -96,12 +95,6 @@ namespace My_Parking
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btn_clear_Click(object sender, EventArgs e)
-        {
-            txt_ID.Text = "";
-            combo_status.Text = "";
         }
     }
 }
