@@ -100,7 +100,6 @@
         }
 
         #endregion
-
         private Button btn_book;
         private Button btn_complain;
         private Button btn_settings;

@@ -10,4 +10,8 @@ namespace My_Parking.Helper
     {
         public static int UserId { get; set; }
     }
+    public static class ParkingArea
+    {
+        public static int ParkingAreaId { get; set; }
+    }
 }

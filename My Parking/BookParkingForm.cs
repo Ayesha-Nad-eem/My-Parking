@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using My_Parking.Helper;
 
 namespace My_Parking
 {
@@ -20,6 +21,27 @@ namespace My_Parking
 
         private void btn_confirmBooking_Click(object sender, EventArgs e)
         {
+            int parkingAreaID;
+            if (int.TryParse(txt_ID.Text, out parkingAreaID))
+            {
+                ParkingArea.ParkingAreaId = parkingAreaID;
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid ID.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;  // Exit the method if the ID is invalid
+            }
+
+            // Ensure that MdiParent is of type UserForm
+            if (this.MdiParent is UserForm userForm)
+            {
+                UserPaymentForm upf = new UserPaymentForm(); // Add parameters if needed in the constructor
+                userForm.LoadFormInPanel(upf);  // Use the MDI parent's method to load the form
+            }
+            else
+            {
+                MessageBox.Show("Invalid MDI Parent", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
         }
 
