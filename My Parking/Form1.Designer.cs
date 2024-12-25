@@ -50,7 +50,7 @@
             lbl_UserName.AutoSize = true;
             lbl_UserName.BackColor = Color.Transparent;
             lbl_UserName.FlatStyle = FlatStyle.Flat;
-            lbl_UserName.Font = new Font("Times New Roman", 16.125F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_UserName.Font = new Font("Times New Roman", 16.125F);
             lbl_UserName.Location = new Point(153, 168);
             lbl_UserName.Name = "lbl_UserName";
             lbl_UserName.Size = new Size(99, 25);
@@ -63,7 +63,7 @@
             lbl_Password.AutoSize = true;
             lbl_Password.BackColor = Color.Transparent;
             lbl_Password.FlatStyle = FlatStyle.Flat;
-            lbl_Password.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Password.Font = new Font("Times New Roman", 16F);
             lbl_Password.Location = new Point(153, 230);
             lbl_Password.Name = "lbl_Password";
             lbl_Password.Size = new Size(96, 25);
@@ -77,7 +77,7 @@
             btn_login.BackColor = Color.Maroon;
             btn_login.FlatAppearance.BorderSize = 0;
             btn_login.FlatStyle = FlatStyle.Flat;
-            btn_login.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_login.Font = new Font("Times New Roman", 16F, FontStyle.Bold);
             btn_login.ForeColor = Color.White;
             btn_login.Location = new Point(153, 324);
             btn_login.Name = "btn_login";
@@ -111,7 +111,7 @@
             checkBox1.Anchor = AnchorStyles.None;
             checkBox1.AutoSize = true;
             checkBox1.BackColor = Color.Transparent;
-            checkBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.Font = new Font("Times New Roman", 12F);
             checkBox1.Location = new Point(153, 280);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(126, 23);
@@ -146,7 +146,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Times New Roman", 20F, FontStyle.Bold);
             label2.Location = new Point(219, 110);
             label2.Name = "label2";
             label2.Size = new Size(121, 31);
@@ -168,7 +168,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Times New Roman", 12F);
             label1.Location = new Point(153, 368);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
@@ -181,7 +181,7 @@
             lable_signup.Anchor = AnchorStyles.None;
             lable_signup.AutoSize = true;
             lable_signup.BackColor = Color.Transparent;
-            lable_signup.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lable_signup.Font = new Font("Times New Roman", 12F);
             lable_signup.Location = new Point(306, 368);
             lable_signup.Margin = new Padding(2, 0, 2, 0);
             lable_signup.Name = "lable_signup";
@@ -189,6 +189,7 @@
             lable_signup.TabIndex = 7;
             lable_signup.TabStop = true;
             lable_signup.Text = "Sign up";
+            lable_signup.LinkClicked += lable_signup_LinkClicked;
             // 
             // Form1
             // 

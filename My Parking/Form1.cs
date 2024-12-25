@@ -2,6 +2,8 @@ using System;
 using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
+using My_Parking.Helper;
+
 namespace My_Parking
 {
     public partial class Form1 : Form
@@ -28,53 +30,63 @@ namespace My_Parking
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-DKF72OO\\SQLEXPRESS;Initial Catalog=ParkingManagementSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
-            con.Open();
-            string query = "SELECT COUNT(*) FROM UserAccount WHERE UserName=@username AND Password=@password";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@username", txt_username.Text);
-            cmd.Parameters.AddWithValue("@password", txt_password.Text);
-            int countB = (int)cmd.ExecuteScalar();
-            string query1 = "SELECT COUNT(*) FROM AdminAccount WHERE Name=@username AND Password=@password";
-            SqlCommand cmd1 = new SqlCommand(query1, con);
-            cmd1.Parameters.AddWithValue("@username", txt_username.Text);
-            cmd1.Parameters.AddWithValue("@password", txt_password.Text);
-            int countA = (int)cmd1.ExecuteScalar();
+            string connectionString = "Data Source=DESKTOP-DKF72OO\\SQLEXPRESS;Initial Catalog=ParkingManagementSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
-            con.Close();
             try
             {
-                if (txt_username.Text != null && txt_password.Text != null)
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    if (countA > 0)
+                    con.Open();
+
+                    // Check Admin Account
+                    string queryAdmin = "SELECT COUNT(*) FROM AdminAccount WHERE Name=@username AND Password=@password";
+                    using (SqlCommand cmdAdmin = new SqlCommand(queryAdmin, con))
                     {
-                        // MessageBox.Show("Login success", "info", MessageBoxButtons.OK);
-                        WelcomeForm wf = new WelcomeForm();
-                        wf.Show();
-                        this.Hide();
-                        wf.FormClosed += (s, args) => this.Close();
+                        cmdAdmin.Parameters.AddWithValue("@username", txt_username.Text);
+                        cmdAdmin.Parameters.AddWithValue("@password", txt_password.Text);
+                        int countAdmin = (int)cmdAdmin.ExecuteScalar();
+
+                        if (countAdmin > 0)
+                        {
+                            // Admin Login Successful
+                            WelcomeForm wf = new WelcomeForm();
+                            wf.Show();
+                            this.Hide();
+                            wf.FormClosed += (s, args) => this.Close();
+                            return;
+                        }
                     }
-                    else if (countB > 0)
+
+                    // Check User Account
+                    string queryUser = "SELECT Id FROM UserAccount WHERE UserName=@username AND Password=@password";
+                    using (SqlCommand cmdUser = new SqlCommand(queryUser, con))
                     {
-                        // MessageBox.Show("Login success", "info", MessageBoxButtons.OK);
-                        UserForm uf = new UserForm();
-                        uf.Show();
-                        this.Hide();
-                        uf.FormClosed += (s, args) => this.Close();
+                        cmdUser.Parameters.AddWithValue("@username", txt_username.Text);
+                        cmdUser.Parameters.AddWithValue("@password", txt_password.Text);
+
+                        object result = cmdUser.ExecuteScalar();
+
+                        if (result != null) // If user exists
+                        {
+                            // Store UserId in UserSession
+                            UserSession.UserId = Convert.ToInt32(result);
+
+                            // User Login Successful
+                            UserForm uf = new UserForm();
+                            uf.Show();
+                            this.Hide();
+                            uf.FormClosed += (s, args) => this.Close();
+                            return;
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Error: Incorrect Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Username or Password not entered, try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    // If no valid user is found
+                    MessageBox.Show("Error: Incorrect Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //string connectionString = "Data Source=DESKTOP-DKF72OO\\SQLEXPRESS;Initial Catalog=ParkingManagementSystem;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
@@ -110,6 +122,14 @@ namespace My_Parking
             login_panel.BackColor = Color.FromArgb(200, 128, 128, 128);
             btn_login.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_login.Width, btn_login.Height, 30, 30));
 
+        }
+
+        private void lable_signup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignupForm sf = new SignupForm();
+            sf.Show();
+            this.Hide();
+            sf.FormClosed += (s, args) => this.Close();
         }
     }
 }
