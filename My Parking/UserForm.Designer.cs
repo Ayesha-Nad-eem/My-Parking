@@ -97,10 +97,10 @@
             // 
             panelContainer.BackColor = Color.Transparent;
             panelContainer.Dock = DockStyle.Fill;
-            panelContainer.Location = new Point(372, 0);
+            panelContainer.Location = new Point(210, 0);
             panelContainer.Margin = new Padding(7, 6, 7, 6);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1526, 923);
+            panelContainer.Size = new Size(528, 351);
             panelContainer.TabIndex = 4;
             panelContainer.Paint += panelUserForm_Paint;
             // 
@@ -113,14 +113,14 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(372, 923);
+            panel1.Size = new Size(210, 351);
             panel1.TabIndex = 0;
             // 
             // UserForm
             // 
-            AutoScaleDimensions = new SizeF(15F, 31F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1898, 923);
+            ClientSize = new Size(738, 351);
             Controls.Add(panelContainer);
             Controls.Add(btn_settings);
             Controls.Add(panel1);
